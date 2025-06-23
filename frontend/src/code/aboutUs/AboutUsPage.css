@@ -1,0 +1,342 @@
+.about-us-body {
+    height: fit-content;
+    width: 100vw;
+    background-color: #ffffff;
+    position: relative;
+    top: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.background-image-color {
+    height: 40vw;
+    width: 100%;
+    background-color: #151821;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-subbody {
+    height: fit-content;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us-main-text-container {
+    height: 10vw;
+    width: 40vw;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.about-us-main-text {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 4vw;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.about-us-down-arrow {
+    height: 20px;
+    width: auto;
+}
+
+.our-project {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.3vw;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.about-us-spots {
+    position: absolute;
+    z-index: 2;
+    top: 10vw;
+    left: 30vw;
+    height: 5vw;
+    width: auto;
+}
+
+.about-us-programming {
+    position: absolute;
+    z-index: 2;
+    top: 15vw;
+    left: 70vw;
+    height: 4vw;
+    rotate: 20deg;
+    width: auto;
+}
+
+.about-us-points1 {
+    position: absolute;
+    z-index: 2;
+    top: 25vw;
+    left: 65vw;
+    height: 1.8vw;
+    rotate: 20deg;
+    width: auto;
+}
+
+.about-us-points2 {
+    position: absolute;
+    z-index: 2;
+    top: 18vw;
+    left: 35vw;
+    height: 1.5vw;
+    rotate: 20deg;
+    width: auto;
+}
+
+.about-us-reward {
+    position: absolute;
+    z-index: 2;
+    top: 28vw;
+    left: 40vw;
+    height: 3.3vw;
+    rotate: 340deg;
+    width: auto;
+}
+
+.about-us-music {
+    position: absolute;
+    z-index: 2;
+    top: 23vw;
+    left: 27vw;
+    height: 5vw;
+    rotate: 335deg;
+    width: auto;
+}
+
+.about-us-drawing {
+    position: absolute;
+    z-index: 2;
+    top: 8.1vw;
+    left: 53vw;
+    height: 4.3vw;
+    rotate: 5deg;
+    width: auto;
+}
+
+.about-us-images-container {
+    position: absolute;
+    top:30vw;
+    width: 82vw;
+    height: fit-content;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.image1 {
+    width: 18vw;
+    height: auto;
+    border-radius: 20px;
+}
+.image2 {
+    width: 18vw;
+    height: auto;
+    border-radius: 20px;
+}
+.image3 {
+    width: 20vw;
+    height: auto;
+    border-radius: 20px;
+}
+.image4 {
+    width: 21vw;
+    height: auto;
+    border-radius: 20px;
+}
+
+.about-us-about-us-container {
+    text-align: center;
+    padding: auto;
+    color: rgb(21, 24, 33);
+    margin-top: 16vw;
+    width: 100%;
+    height: 22vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us-about-us-text-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-us-about-us-title {
+    width: 100%;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.about-us-about-us-text {
+    width: 100%;
+    font-size: 1.3vw;
+}
+
+.about-us-about-us-image {
+    height: 100%;
+    width: auto;
+    border-radius: 15px;
+}
+
+.about-us-about-project-container {
+    text-align: center;
+    padding: auto;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    color: black;
+    margin-top: 10vw;
+    width: 100%;
+    height: 21vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 209, 74);
+    align-items: center;
+    z-index: 3;
+    position: relative;
+}
+
+.about-us-about-project-text-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 4vw;
+}
+
+.about-us-about-project-title {
+    width: 100%;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.about-us-about-project-text {
+    width: 100%;
+    font-size: 1.3vw;
+}
+
+.about-us-about-project-image {
+    height: 140%;
+    width: auto;
+    border-radius: 3vw;
+    margin-left: 6vw;
+    position: absolute;
+}
+
+.about-us-about-project-image-space {
+    height: 95%;
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+}
+
+.about-us-project-gives-container {
+    width: 100%;
+    height: 29vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 7vw;
+}
+
+.about-us-project-gives-title {
+    text-align: center;
+    padding: auto;
+    color: black;
+    width: 100%;
+    font-size: 2vw;
+}
+
+.about-us-project-gives-elements-container {
+    width: 100%;
+    height: 23vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-us-project-gives-element {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us-project-gives-element-image-container {
+    width: 100%;
+    height: 55%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.about-us-project-gives-element-image {
+    height: 6vw;
+    width: auto;
+    z-index: 1;
+}
+
+.about-us-project-gives-element-image-circle {
+    height: 10vw;
+    width: 10vw;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 0;
+    background-color: rgb(255, 209, 74);
+}
+
+.about-us-project-gives-element-text {
+    width: 80%;
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'League Spartan', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    color: black;
+}
+
+.blur {
+    position: absolute;
+    height: 4vw;
+    width: auto;
+    left: 4.3vw;
+    margin-top: 3vw;
+}
+.star {
+    position: absolute;
+    height: 3vw;
+    width: auto;
+    right: 8vw;
+}
+.diamond {
+    position: absolute;
+    height: 1vw;
+    width: auto;
+    right: 10.2vw;
+    margin-top: 2vw;
+}
+.pattern {
+    position: absolute;
+    height: 4vw;
+    width: auto;
+    right: 23.2vw;
+    top: 106.5vw;
+    rotate: 310deg;
+}

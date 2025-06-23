@@ -1,0 +1,290 @@
+.category-body {
+    background-color: #1d242c;
+    width: 100vw;
+    min-height: 100vh;
+    padding-top: 0;
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    overflow-x: hidden;
+}
+
+.intro-section,
+.skills-section,
+.resources-section,
+.cta-section {
+    width: 80vw;
+    margin: 4vw auto;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-in;
+}
+
+.section-divider {
+    width: 50vw;
+    margin: 2vw auto;
+    border: 0;
+    height: 0.1vw;
+    background-color: #00d4b4;
+    opacity: 0.7;
+}
+
+.intro-section h1 {
+    font-size: 4vw;
+    font-weight: 700;
+    margin-bottom: 1.5vw;
+    margin-top: 1vw;
+    color: #ffffff;
+}
+
+.intro-section p {
+    font-size: 1.8vw;
+    line-height: 1.5;
+    max-width: 70vw;
+    margin: 0 auto 2vw;
+    color: #e0e0e0;
+}
+
+.skills-section h2,
+.resources-section h2,
+.cta-section h2 {
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2vw;
+    margin-top: 1vw;
+}
+
+.skills-section .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+}
+
+.skills-section .skill-card {
+    background: linear-gradient(135deg, #1d242c, #253b4c);
+    border-radius: 0.9vw;
+    padding: 1.5vw;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border: 0.1vw solid #465e71;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-section .skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.skills-section .skill-card h3 {
+    font-size: 2vw;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5vw;
+}
+
+.skills-section .skill-card p {
+    font-size: 1.4vw;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.resources-section .resources-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 2vw;
+    padding: 1vw;
+}
+
+.resources-section .resources-grid::-webkit-scrollbar {
+    height: 1vw;
+}
+
+.resources-section .resources-grid::-webkit-scrollbar-track {
+    border-radius: 1vw;
+    background-color: #e5e5e5;
+}
+
+.resources-section .resources-grid::-webkit-scrollbar-thumb {
+    border-radius: 1vw;
+    background-color: #5e6e7a;
+    border: 0.2vw solid white;
+}
+
+.resources-section .resource-card {
+    flex: 0 0 30vw;
+    background: linear-gradient(135deg, #1d242c, #253b4c);
+    border-radius: 0.9vw;
+    padding: 1.5vw;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border: 0.1vw solid #465e71;
+    transition: transform 0.3s ease;
+}
+
+.resources-section .resource-card:hover {
+    transform: translateY(-0.5vw);
+}
+
+.resources-section .resource-card h3 {
+    font-size: 2vw;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5vw;
+}
+
+.resources-section .resource-card p {
+    font-size: 1.4vw;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.cta-section .cta-content {
+    background: linear-gradient(135deg, #1d242c, #253b4c);
+    border-radius: 1vw;
+    padding: 2vw;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border: 0.1vw solid #465e71;
+    transition: transform 0.3s ease;
+}
+
+.cta-section .cta-content:hover {
+    transform: translateY(-0.5vw);
+}
+
+.cta-section h2 {
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1vw;
+}
+
+.cta-section p {
+    font-size: 1.6vw;
+    line-height: 1.5;
+    color: #e0e0e0;
+    margin-bottom: 1.5vw;
+}
+
+.cta-section .cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8vw 1.6vw;
+    border: none;
+    border-radius: 0.5vw;
+    font-size: 1.4vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-section .cta-button:hover {
+    background-color: #00d4b4;
+    transform: scale(1.05);
+}
+
+.category-footer-image {
+    width: 100vw;
+    height: auto;
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .intro-section,
+    .skills-section,
+    .resources-section,
+    .cta-section {
+        width: 90vw;
+    }
+
+    .intro-section h1 {
+        font-size: 6vw;
+    }
+
+    .intro-section p {
+        font-size: 3vw;
+        max-width: 90%;
+    }
+
+    .skills-section h2,
+    .resources-section h2,
+    .cta-section h2 {
+        font-size: 5vw;
+    }
+
+    .skills-section .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 3vw;
+    }
+
+    .skills-section .skill-card h3 {
+        font-size: 3.5vw;
+    }
+
+    .skills-section .skill-card p {
+        font-size: 2.5vw;
+    }
+
+    .resources-section .resource-card {
+        flex: 0 0 50vw;
+    }
+
+    .resources-section .resource-card h3 {
+        font-size: 3.5vw;
+    }
+
+    .resources-section .resource-card p {
+        font-size: 2.5vw;
+    }
+
+    .cta-section p {
+        font-size: 2.5vw;
+    }
+
+    .cta-section .cta-button {
+        font-size: 2.5vw;
+        padding: 1.5vw 3vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section h1 {
+        font-size: 8vw;
+    }
+
+    .intro-section p {
+        font-size: 4vw;
+    }
+
+    .skills-section h2,
+    .resources-section h2,
+    .cta-section h2 {
+        font-size: 6vw;
+    }
+
+    .skills-section .skill-card h3 {
+        font-size: 4.5vw;
+    }
+
+    .skills-section .skill-card p {
+        font-size: 3.5vw;
+    }
+
+    .resources-section .resource-card h3 {
+        font-size: 4.5vw;
+    }
+
+    .resources-section .resource-card p {
+        font-size: 3.5vw;
+    }
+
+    .cta-section p {
+        font-size: 3.5vw;
+    }
+
+    .cta-section .cta-button {
+        font-size: 3.5vw;
+    }
+}

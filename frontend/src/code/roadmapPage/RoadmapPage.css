@@ -1,0 +1,876 @@
+.roadmap-body {
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: fit-content;
+    position: relative;
+}
+
+.roadmap-body.programming {
+    background-color: rgb(19, 27, 92);
+}
+
+.roadmap-body.musicperformance {
+    background-color: rgb(255, 201, 56);
+}
+
+.roadmap-body.languages {
+    background-color: rgb(65, 14, 107);
+}
+
+.roadmap-body.neonglow {
+    background-color: rgb(0, 0, 0);
+}
+
+.background-image {
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+
+.subtopic-container {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.subtopic-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.subtopic-image {
+    width: 20%;
+    height: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.subtopic-name {
+    text-align: center;
+    padding: 1vw 0;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 4vw;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.subtopic-name::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 0.2vw;
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgb(0, 212, 180), rgba(255,255,255,0));
+}
+
+.subtopic-description {
+    text-align: center;
+    padding: 1vw 0;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.6vw;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.subtopic-info {
+    width: 80vw;
+    margin: 2vw auto;
+    padding: 3vw 4vw;
+    font-family: 'League Spartan', sans-serif;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(135deg, rgba(10, 15, 50, 0.9), rgba(19, 27, 92, 0.95));
+    border: 0.2vw solid #00d4b4;
+    border-radius: 1.5vw;
+    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.3), inset 0 0 1vw rgba(0, 212, 180, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.subtopic-info::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 212, 180, 0.1) 0%, transparent 70%);
+    z-index: 0;
+    animation: pulse 8s infinite;
+}
+
+.subtopic-info h3 {
+    font-size: 2.5vw;
+    font-weight: 700;
+    color: rgb(0, 212, 180);
+    margin-bottom: 2vw;
+    text-transform: uppercase;
+    letter-spacing: 0.15vw;
+    position: relative;
+    z-index: 1;
+}
+
+.subtopic-info h3::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5vw;
+    left: 0;
+    width: 3vw;
+    height: 0.3vw;
+    background: rgb(0, 212, 180);
+    border-radius: 0.2vw;
+}
+
+.subtopic-info p {
+    font-size: 1.5vw;
+    line-height: 2.2;
+    margin-bottom: 2.5vw;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+    padding-left: 1vw;
+    border-left: 0.3vw solid rgba(0, 212, 180, 0.5);
+}
+
+.subtopic-feedback {
+    height: 5vw;
+    width: 100%;
+    margin-bottom: 2vw;
+}
+
+.container-in-roadmap {
+    width: 100vw;
+    height: fit-content;
+}
+
+.best-container {
+    width: 80vw;
+    height: 40vw;
+    margin: 4vw auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.best-resource,
+.best-contributor,
+.best-advice {
+    height: 100%;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.best-resource-upper-container,
+.best-contributor-upper-container,
+.best-advice-upper-container {
+    height: 10%;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vw 1vw 0 0;
+    background-color: rgb(50, 101, 255);
+    position: relative;
+}
+
+/* UpperBody Programming */
+.best-resource-upper-container.programming {
+    background-color: rgb(50, 101, 255);
+}
+
+.best-contributor-upper-container.programming {
+    background-color: rgb(71, 30, 184);
+}
+
+.best-advice-upper-container.programming {
+    background-color: rgb(52, 22, 224);
+}
+
+/* UpperBody Music */
+.best-resource-upper-container.musicperformance {
+    background-color: rgb(32, 50, 72);
+}
+
+.best-contributor-upper-container.musicperformance {
+    background-color: rgb(76, 34, 18);
+}
+
+.best-advice-upper-container.musicperformance {
+    background-color: rgb(232, 173, 32);
+}
+
+/* UpperBody Language */
+.best-resource-upper-container.languages {
+    background-color: rgb(28, 5, 92);
+}
+
+.best-contributor-upper-container.languages {
+    background-color: rgb(44, 18, 65);
+}
+
+.best-advice-upper-container.languages {
+    background-color: rgb(123, 28, 113);
+}
+
+/* UpperBody NeonGlow */
+.best-resource-upper-container.neonglow {
+    background-color: rgb(22, 241, 239);
+    position: relative;
+    z-index: 1;
+}
+
+.best-contributor-upper-container.neonglow {
+    background-color: rgb(28, 5, 92);
+    position: relative;
+    z-index: 12;
+}
+
+.best-advice-upper-container.neonglow {
+    background-color: rgb(0, 80, 213);
+    position: relative;
+    z-index: 5;
+}
+
+.best-resource-down-container,
+.best-contributor-down-container,
+.best-advice-down-container {
+    height: 89%;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.best-resource-down-container {
+    border-radius: 0 0 0 1vw;
+    background-color: rgb(50, 101, 255);
+    position: relative;
+    z-index: 1;
+}
+
+.best-contributor-down-container {
+    background-color: rgb(71, 30, 184);
+    transition: all 0.5s ease;
+    z-index: 6;
+}
+
+.best-advice-down-container {
+    border-radius: 0 0 1vw 0;
+    z-index: 2;
+    background-color: rgb(52, 22, 224);
+}
+
+/* DownBody Programming */
+.best-resource-down-container.programming {
+    background-color: rgb(50, 101, 255);
+}
+
+.best-contributor-down-container.programming {
+    background-color: rgb(71, 30, 184);
+}
+
+.best-advice-down-container.programming {
+    background-color: rgb(52, 22, 224);
+}
+
+/* DownBody Music */
+.best-resource-down-container.musicperformance {
+    background-color: rgb(32, 50, 72);
+}
+
+.best-contributor-down-container.musicperformance {
+    background-color: rgb(76, 34, 18);
+}
+
+.best-advice-down-container.musicperformance {
+    background-color: rgb(232, 173, 32);
+}
+
+/* DownBody Languages */
+.best-resource-down-container.languages {
+    background-color: rgb(28, 5, 92);
+}
+
+.best-contributor-down-container.languages {
+    background-color: rgb(44, 18, 65);
+}
+
+.best-advice-down-container.languages {
+    background-color: rgb(123, 28, 113);
+}
+
+/* DownBody NeonGlow */
+.best-resource-down-container.neonglow {
+    background-color: rgb(22, 241, 239);
+}
+
+.best-contributor-down-container.neonglow {
+    background-color: rgb(28, 5, 92);
+}
+
+.best-advice-down-container.neonglow {
+    background-color: rgb(0, 80, 213);
+}
+
+.best-resource-resource-container {
+    width: 100%;
+    height: 14vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.best-resource-resource-name {
+    margin: auto;
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 2vw;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+.best-resource-resource-type {
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-top: 1vw;
+}
+
+.best-resource-resource-author {
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.5vw;
+    color: rgb(176, 176, 176);
+    margin: 0 auto;
+    margin-top: 0.5vw;
+}
+
+.best-resource-underline {
+    width: 87%;
+    height: 1px;
+    background-color: white;
+    margin: 1vw auto;
+}
+
+.best-resource-source {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.5vw;
+    color: rgb(255, 255, 255);
+    margin-top: 0.5vw;
+    margin-left: 6.5%;
+}
+
+.best-contributor-profile-picture-container {
+    height: 15vw;
+    width: 25vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.best-contributor-profile-picture {
+    height: 10vw;
+    width: 10vw;
+    background-color: aliceblue;
+    border-radius: 100%;
+}
+
+.best-contributor-username {
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 2vw;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+.best-contributor-filtered-score {
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.5vw;
+    color: rgb(176, 176, 176);
+    margin: 0 auto;
+    margin-top: 0.5vw;
+}
+
+.best-contributor-underline {
+    width: 87%;
+    height: 1px;
+    background-color: white;
+    margin: 1vw auto;
+}
+
+.best-contributor-other-scores {
+    width: 90%;
+    margin: 0 auto;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.best-contributor-other-score_1,
+.best-contributor-other-score_2 {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.best-contributor-other-score_text {
+    height: 40%;
+    width: 100%;
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.2vw;
+    color: rgb(206, 206, 206);
+}
+
+.best-contributor-other-score_number {
+    height: 55%;
+    width: 100%;
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 2.2vw;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+.best-advice-advice-container {
+    width: 100%;
+    height: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.best-advice-advice-text {
+    margin: auto;
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+.best-advice-advice-author {
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.6vw;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+.best-advice-advice-likes {
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.3vw;
+    color: rgb(204, 204, 204);
+    margin: 0 auto;
+    margin-top: 0.5vw;
+}
+
+.best-advice-underline {
+    width: 87%;
+    height: 1px;
+    background-color: white;
+    margin: 1vw auto;
+}
+
+.best-advice-source {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.5vw;
+    color: rgb(255, 255, 255);
+    margin-top: 0.5vw;
+    margin-left: 6.5%;
+}
+
+.best-title {
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 2vw;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+
+.best-image {
+    height: 10vw;
+    width: 10vw;
+}
+
+.roadmap-container-roadmap {
+    width: 80vw;
+    height: fit-content;
+    min-height: 20vw;
+    margin: 4vw auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    padding: 2vw;
+    border-radius: 1vw;
+    background-color: rgb(10, 15, 50);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 0.2vw solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roadmap-info {
+    margin: 1vw auto;
+    width: 95%;
+    height: 3.5vw;
+    background-color: rgb(19, 27, 92);
+    border-radius: 1vw;
+    z-index: 1;
+    align-items: center;
+    display: flex;
+}
+
+.circle-info-yellow {
+    height: 1.5vw;
+    width: 1.5vw;
+    background-color: rgb(255, 209, 74);
+    border-radius: 100%;
+    margin-left: 2vw;
+}
+
+.circle-info-red {
+    height: 1.5vw;
+    width: 1.5vw;
+    background-color: rgb(202, 33, 33);
+    border-radius: 100%;
+    margin-left: 2vw;
+}
+
+.text-info {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin-left: 0.7vw;
+    margin-top: 0.3vw;
+}
+
+.roadmap-algoritm {
+    width: 95%;
+    max-height: 35vw;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+    overflow: auto;
+    border-radius: 1vw;
+    scrollbar-color: rgb(19, 27, 92);
+    padding-top: 5vw; /* Reduced from 10vw to center the tree better */
+    padding-left: 5vw;
+}
+
+.roadmap-algoritm::-webkit-scrollbar {
+    width: 1.3vw;
+    height: 1.3vw;
+}
+
+.roadmap-algoritm::-webkit-scrollbar-track {
+    border-radius: 1vw;
+    background-color: #E5E5E5;
+}
+
+.roadmap-algoritm::-webkit-scrollbar-thumb {
+    border-radius: 1vw;
+    background-color: rgb(19, 27, 92);
+    border: 0.3vw solid;
+    border-color: white;
+}
+
+.roadmap-algoritm::-webkit-scrollbar-corner {
+    background: rgb(10, 15, 50);
+}
+
+svg {
+    margin: auto 0;
+    flex-shrink: 0;
+}
+
+.discussion-container {
+    height: fit-content;
+    width: 80vw;
+    margin: 2vw auto;
+}
+
+.discussion-type {
+    height: 4vw;
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discussion-type-link {
+    text-align: center;
+    padding: 0.5vw;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.8vw;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.discussion-type-link:hover {
+    color: #5e90b3;
+}
+
+.discussion-space {
+    height: fit-content;
+    position: relative;
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+}
+
+.best-resource,
+.best-contributor,
+.best-advice {
+    position: relative;
+}
+
+.best-advice-down-container.active-z {
+    border-left: none;
+}
+
+.slide-panel {
+    position: absolute;
+    bottom: 0;
+    height: 89%;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.2);
+    transition: all 1s ease;
+    z-index: 1;
+    pointer-events: none;
+    background: rgb(10, 15, 50);
+    border-radius: 0 0 1vw 0;
+}
+
+.slide-panel.open {
+    pointer-events: auto;
+}
+
+.slide-right {
+    left: 100%;
+    width: 0vw;
+    background-color: rgb(50, 101, 255);
+    border-radius: 0 0 1vw 0;
+    border-left: none;
+}
+
+.slide-right.open {
+    width: 55vw;
+    z-index: 100;
+}
+
+.slide-left {
+    right: 100%;
+    width: 0vw;
+    border-radius: 0 0 0 1vw;
+    background-color: rgb(19, 27, 92);
+    border-right: none;
+}
+
+.slide-left.open {
+    width: 55vw;
+    z-index: 100;
+}
+
+.slide-both {
+    left: 12.5vw;
+    width: 0vw;
+    border-radius: 0 0 1vw 1vw;
+    background-color: rgb(19, 27, 92);
+}
+
+.slide-both.open {
+    transform: translateX(-40vw);
+    width: 80vw;
+    z-index: 5;
+}
+
+.slide-panel-content {
+    padding: 2vw;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.5vw;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide-panel.open .slide-panel-content {
+    opacity: 1;
+}
+
+.container12 {
+    display: flex;
+    min-height: 90vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    transition: all 0.6s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+/* When opened */
+.panel.open {
+    flex: 6;
+    background: rgb(19, 27, 92);
+}
+
+/* When closed */
+.panel.closed {
+    flex: 1;
+    background: rgb(19, 27, 92);
+    cursor: pointer;
+}
+
+/* Rotated name */
+.rotated-text1 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 1.2rem;
+    opacity: 0.7;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    pointer-events: none;
+    transition: all 0.6s ease;
+    font-family: 'League Spartan', sans-serif;
+    font-size: calc(100vw*0.03);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+/* Hide rotated text when opening */
+.panel.open .rotated-text1 {
+    opacity: 0;
+}
+
+/* Content shown when open */
+.panel-content {
+    overflow-y: auto;
+    height: 80vh;
+    width: calc(100% - 2rem - 16px);
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+    z-index: 1;
+    position: relative;
+    scrollbar-color: rgb(19, 27, 92);
+    padding-left: 1rem;
+    padding-right: calc(16px + 1rem);
+}
+
+.panel-content::-webkit-scrollbar {
+    width: 1.3vw;
+    height: 1.3vw;
+}
+.panel-content::-webkit-scrollbar-track {
+    border-radius: 1vw;
+    background-color: #E5E5E5;
+}
+.panel-content::-webkit-scrollbar-thumb {
+    border-radius: 1vw;
+    background-color: rgb(19, 27, 92);
+    border: 0.3vw solid;
+    border-color: white;
+}
+.panel-content::-webkit-scrollbar-corner {
+    background: rgb(19, 27, 92); 
+}
+
+.panel-content-container {
+    padding: 0 1rem;
+    width: 100%;
+    height: 80vh;
+}
+.panel-content-container.recommendations {
+    border-right: 1px solid white;
+}
+.panel-content-container.comments {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+.panel-content-container.advises {
+    border-left: 1px solid white;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Pulse animation for subtle background effect */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.1; }
+    100% { transform: scale(1); opacity: 0.3; }
+}
+
+.node-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    background: rgb(19, 27, 92);
+    color: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.node-panel.open {
+    transform: translateX(0);
+}
+
+.panel-content {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

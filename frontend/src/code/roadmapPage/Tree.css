@@ -1,0 +1,11 @@
+.action-circle {
+    cursor: pointer;
+  }
+  
+  .action-circle circle {
+    transition: r 0.2s ease;
+  }
+  
+  .action-circle:hover circle {
+    r: 14;
+  }

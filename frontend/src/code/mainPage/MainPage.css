@@ -1,0 +1,739 @@
+.main-body {
+    background-color: #1d242c;
+    width: 100vw;
+    min-height: 100vh;
+    padding-top: 0;
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    overflow-x: hidden;
+}
+
+.main-page-image {
+    width: 100vw;
+    height: auto;
+    display: block;
+}
+
+.intro-section,
+.community-section,
+.features-section,
+.testimonials-section,
+.cta-section {
+    width: 80vw;
+    margin: 4vw auto;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-in;
+}
+
+.section-divider {
+    width: 50vw;
+    margin: 2vw auto;
+    border: 0;
+    height: 0.1vw;
+    background-color: #00d4b4;
+    opacity: 0.7;
+}
+
+.intro-section h1 {
+    font-size: 4vw;
+    font-weight: 700;
+    margin-bottom: 1.5vw;
+    margin-top: 1vw;
+    color: #ffffff;
+}
+
+.intro-section p {
+    font-size: 1.8vw;
+    line-height: 1.5;
+    max-width: 70vw;
+    margin: 0 auto 2vw;
+    color: #e0e0e0;
+}
+
+.community-section .community-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #1d242c, #253b4c);
+    border-radius: 1vw;
+    padding: 2vw;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border: 0.1vw solid #465e71;
+    transition: transform 0.3s ease;
+}
+
+.community-section .community-content:hover {
+    transform: translateY(-0.5vw);
+}
+
+.community-section .community-text {
+    width: 60%;
+    text-align: left;
+}
+
+.community-section h2 {
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1vw;
+}
+
+.community-section p {
+    font-size: 1.6vw;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.community-section .community-visual {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.community-section .visual-placeholder {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #253b4c;
+    border-radius: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e0e0e0;
+    font-size: 1.5vw;
+    border: 0.1vw solid #00d4b4;
+    overflow: hidden
+}
+
+.features-tree-section {
+    width: 80%;
+    height: fit-content;
+    min-height: 80vw;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 1vw;
+}
+
+.features-tree-question {
+    font-size: 5vw;
+    color: #ffffff;
+    margin: 0 auto;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.circle-wrapper {
+    position: relative;
+    width: 12vw;
+    height: 12vw;
+    top: 12vw;
+    left: 8vw;
+}
+
+.feature-tree-first-circle {
+    width: 7vw;
+    height: 7vw;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0.3vw solid #00d4b4;
+    background-color: #1d242c;
+    z-index: 3;
+    box-shadow: 0 0 10px rgba(0, 212, 180, 0.3);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-tree-first-circle:hover {
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 212, 180, 0.5);
+}
+
+.feature-tree-first-line {
+    position: absolute;
+    top: calc(50% + 0.3vw);
+    left: 50%;
+    transform: rotate(-55deg);
+    width: 0.3vw;
+    height: 40vw;
+    background: linear-gradient(180deg, #00d4b4, #465e71);
+    transform-origin: top center;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.feature-tree-first-line:hover {
+    opacity: 1;
+}
+
+.feature-tree-second-line {
+    position: absolute;
+    top: calc(50% + 6.3vw);
+    left: 50%;
+    transform: rotate(25deg);
+    width: 0.3vw;
+    height: 30vw;
+    background: linear-gradient(180deg, #00d4b4, #465e71);
+    transform-origin: top center;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.feature-tree-second-line:hover {
+    opacity: 1;
+}
+
+.curated-roadmaps,
+.community-voting,
+.interactive-learning {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.curated-roadmaps {
+    left: 18vw;
+    top: -0.5vw;
+}
+
+.community-voting {
+    left: 10vw;
+    top: 21.3vw;
+}
+
+.interactive-learning {
+    left: 42.8vw;
+    top: 39.5vw;
+}
+
+.curated-roadmaps-name,
+.community-voting-name,
+.interactive-learning-name {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 0.5vw;
+}
+
+.curated-roadmaps-text,
+.community-voting-text,
+.interactive-learning-text {
+    font-size: 1vw;
+    color: #e0e0e0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.features-section h2 {
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2vw;
+    margin-top: 1vw;
+}
+
+.features-section .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+}
+
+.features-section .feature-card {
+    background: linear-gradient(135deg, #1d242c, #253b4c);
+    border-radius: 0.9vw;
+    padding: 1.5vw;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border: 0.1vw solid #465e71;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-section .feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.features-section .feature-card h3 {
+    font-size: 2vw;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5vw;
+}
+
+.features-section .feature-card p {
+    font-size: 1.4vw;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.testimonials-section h2 {
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2vw;
+    margin-top: 1vw;
+}
+
+.testimonials-section .testimonials-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 2vw;
+    padding: 1vw;
+}
+
+.testimonials-section .testimonials-grid::-webkit-scrollbar {
+    height: 1vw;
+}
+
+.testimonials-section .testimonials-grid::-webkit-scrollbar-track {
+    border-radius: 1vw;
+    background-color: #e5e5e5;
+}
+
+.testimonials-section .testimonials-grid::-webkit-scrollbar-thumb {
+    border-radius: 1vw;
+    background-color: #5e6e7a;
+    border: 0.2vw solid white;
+}
+
+.testimonials-section .testimonial-card {
+    flex: 0 0 30vw;
+    background: linear-gradient(135deg, #1d242c, #253b4c);
+    border-radius: 0.9vw;
+    padding: 1.5vw;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border: 0.1vw solid #465e71;
+    transition: transform 0.3s ease;
+}
+
+.testimonials-section .testimonial-card:hover {
+    transform: translateY(-0.5vw);
+}
+
+.testimonials-section .testimonial-card p {
+    font-size: 1.4vw;
+    line-height: 1.5;
+    color: #e0e0e0;
+    margin-bottom: 1vw;
+}
+
+.testimonials-section .testimonial-card span {
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.cta-section .cta-content {
+    background: linear-gradient(135deg, #1d242c, #253b4c);
+    border-radius: 1vw;
+    padding: 2vw;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border: 0.1vw solid #465e71;
+    transition: transform 0.3s ease;
+}
+
+.cta-section .cta-content:hover {
+    transform: translateY(-0.5vw);
+}
+
+.cta-section h2 {
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1vw;
+}
+
+.cta-section p {
+    font-size: 1.6vw;
+    line-height: 1.5;
+    color: #e0e0e0;
+    margin-bottom: 1.5vw;
+}
+
+.cta-section .cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8vw 1.6vw;
+    border: none;
+    border-radius: 0.5vw;
+    font-size: 1.4vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-section .cta-button:hover {
+    background-color: #00d4b4;
+    transform: scale(1.05);
+}
+
+.main-roadmaps-container-main {
+    width: 96vw;
+    margin: 0 auto;
+    background-color: #1d242c;
+    padding-bottom: 8vw;
+}
+
+.main-roadmap-container-main {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    margin: 1vw 0;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.main-container-name {
+    font-size: 3vw;
+    color: white;
+    margin-left: 1.7vw;
+    margin-bottom: 0vw;
+    margin-top: 0.3vw;
+    font-weight: 600;
+}
+
+.main-roadmap-boxes {
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 0vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-color: #5e6e7a;
+    box-sizing: border-box;
+}
+
+.main-roadmap-boxes::-webkit-scrollbar {
+    width: 1.3vw;
+    height: 1.3vw;
+}
+
+.main-roadmap-boxes::-webkit-scrollbar-track {
+    border-radius: 1vw;
+    background-color: #e5e5e5;
+}
+
+.main-roadmap-boxes::-webkit-scrollbar-thumb {
+    border-radius: 1vw;
+    background-color: #5e6e7a;
+    border: 0.3vw solid white;
+}
+
+.main-roadmap-box {
+    flex: 0 0 auto;
+    height: 18vw;
+    width: 13vw;
+    margin: 0 0.5vw;
+    background-color: #15181b;
+    border-radius: 0.9vw;
+    border: 0.1vw solid #465e71;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideIn 0.5s ease;
+}
+
+.main-roadmap-box:hover {
+    transform: translateY(-0.5vw);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.main-roadmap-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.main-roadmap-image-background {
+    width: 94%;
+    aspect-ratio: 1/1;
+    border-radius: 0.5vw;
+    object-fit: cover;
+}
+
+.main-roadmap-info-container {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5vw;
+    box-sizing: border-box;
+}
+
+.main-roadmap-name {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: white;
+    margin-left: 0.5vw;
+    line-height: 1.05;
+    margin-top: 0.2vw;
+    margin-bottom: 0.2vw;
+}
+
+.main-feedback-container {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0.5vw 0;
+    box-sizing: border-box;
+}
+
+.main-like-container,
+.main-save-container {
+    display: flex;
+    align-items: center;
+    gap: 0.3vw;
+    width: 50%;
+    justify-content: right;
+}
+
+.main-like-number {
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+}
+
+.main-heart {
+    height: 1vw;
+    width: auto;
+    cursor: pointer;
+}
+
+.main-footer-image {
+    width: 100vw;
+    height: auto;
+    display: block;
+}
+
+.loading-container,
+.error-container,
+.empty-container {
+    color: white;
+    text-align: center;
+    padding: 2vw;
+    font-size: 1.5vw;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .intro-section,
+    .community-section,
+    .features-section,
+    .testimonials-section,
+    .cta-section {
+        width: 90vw;
+    }
+
+    .intro-section h1 {
+        font-size: 6vw;
+    }
+
+    .intro-section p {
+        font-size: 3vw;
+        max-width: 90%;
+    }
+
+    .community-section .community-content {
+        flex-direction: column;
+        padding: 3vw;
+    }
+
+    .community-section .community-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .community-section h2 {
+        font-size: 5vw;
+    }
+
+    .community-section p {
+        font-size: 2.5vw;
+    }
+
+    .community-section .community-visual {
+        width: 50%;
+        margin-top: 2vw;
+    }
+
+    .community-section .visual-placeholder {
+        font-size: 2.5vw;
+    }
+
+    .features-section h2 {
+        font-size: 5vw;
+    }
+
+    .features-section .features-grid {
+        grid-template-columns: 1fr;
+        gap: 3vw;
+    }
+
+    .features-section .feature-card h3 {
+        font-size: 3.5vw;
+    }
+
+    .features-section .feature-card p {
+        font-size: 2.5vw;
+    }
+
+    .testimonials-section h2 {
+        font-size: 5vw;
+    }
+
+    .testimonials-section .testimonial-card {
+        flex: 0 0 50vw;
+    }
+
+    .testimonials-section .testimonial-card p {
+        font-size: 2.5vw;
+    }
+
+    .testimonials-section .testimonial-card span {
+        font-size: 2vw;
+    }
+
+    .cta-section h2 {
+        font-size: 5vw;
+    }
+
+    .cta-section p {
+        font-size: 2.5vw;
+    }
+
+    .cta-section .cta-button {
+        font-size: 2.5vw;
+        padding: 1.5vw 3vw;
+    }
+
+    .main-roadmaps-container-main {
+        width: 95vw;
+    }
+
+    .main-roadmap-container-main {
+        min-height: 40vw;
+        padding: 2vw;
+    }
+
+    .main-roadmap-boxes {
+        padding: 2vw;
+    }
+
+    .main-roadmap-box {
+        width: 25vw;
+        height: 34vw;
+    }
+
+    .main-container-name {
+        font-size: 5vw;
+        margin-bottom: 2vw;
+    }
+
+    .main-roadmap-name {
+        font-size: 3vw;
+    }
+
+    .main-like-number {
+        font-size: 2.5vw;
+    }
+
+    .main-heart {
+        height: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section h1 {
+        font-size: 8vw;
+    }
+
+    .intro-section p {
+        font-size: 4vw;
+    }
+
+    .community-section h2 {
+        font-size: 6vw;
+    }
+
+    .community-section p {
+        font-size: 3.5vw;
+    }
+
+    .community-section .visual-placeholder {
+        font-size: 3vw;
+    }
+
+    .features-section h2 {
+        font-size: 6vw;
+    }
+
+    .features-section .feature-card h3 {
+        font-size: 4.5vw;
+    }
+
+    .features-section .feature-card p {
+        font-size: 3.5vw;
+    }
+
+    .testimonials-section h2 {
+        font-size: 6vw;
+    }
+
+    .testimonials-section .testimonial-card p {
+        font-size: 3.5vw;
+    }
+
+    .testimonials-section .testimonial-card span {
+        font-size: 3vw;
+    }
+
+    .cta-section h2 {
+        font-size: 6vw;
+    }
+
+    .cta-section p {
+        font-size: 3.5vw;
+    }
+
+    .cta-section .cta-button {
+        font-size: 3.5vw;
+    }
+
+    .main-roadmap-box {
+        width: 35vw;
+        height: 45vw;
+    }
+
+    .main-roadmap-name {
+        font-size: 4vw;
+    }
+
+    .main-like-number {
+        font-size: 3.5vw;
+    }
+}

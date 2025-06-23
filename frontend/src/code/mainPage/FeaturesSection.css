@@ -1,0 +1,281 @@
+.features-section {
+    width: 80vw;
+    margin: 4vw auto;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .features-section h2 {
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 3vw;
+    margin-top: 1vw;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'League Spartan', sans-serif;
+  }
+  
+  .features-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1d242c, #253b4c);
+    border-radius: 1vw;
+    padding: 4vw;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 0.1vw solid #465e71;
+    transition: transform 0.3s ease;
+  }
+  
+  .features-container:hover {
+    transform: translateY(-0.5vw);
+  }
+  
+  .features-tree {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    max-width: 1000px;
+    overflow: hidden;
+  }
+  
+  .feature-node {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-node:hover {
+    transform: scale(1.05);
+  }
+  
+  .node-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1d242c;
+    border: 3px solid #00d4b4;
+    box-shadow: 0 0 10px rgba(0, 212, 180, 0.3);
+    position: relative;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-node:hover .node-circle {
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 212, 180, 0.5);
+  }
+  
+  .node-text {
+    background-color: #253b4c;
+    border: 2px solid #00d4b4;
+    border-radius: 10px;
+    padding: 10px 15px;
+    max-width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-left: 20px;
+  }
+  
+  .feature-node-1 .node-text {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  
+  .feature-node:hover .node-text {
+    background-color: #465e71;
+    border-color: #ffffff;
+  }
+  
+  .node-text h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+    font-family: 'League Spartan', sans-serif;
+  }
+  
+  .node-text p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin: 0;
+    line-height: 1.4;
+    font-family: 'League Spartan', sans-serif;
+  }
+  
+  /* Positioning nodes */
+  .feature-node-1 {
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+  }
+  
+  .feature-node-2 {
+    top: 200px;
+    left: 70%;
+    transform: translateX(-50%);
+  }
+  
+  .feature-node-3 {
+    top: 200px;
+    left: 30%;
+    transform: translateX(-50%);
+  }
+  
+  /* Connector lines using pseudo-elements */
+  .feature-node-1 .node-circle::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 4px;
+    background: linear-gradient(90deg, #00d4b4, #465e71);
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%) rotate(35deg);
+    transform-origin: 0 50%;
+    transition: opacity 0.3s ease;
+  }
+  
+  .features-container:hover .feature-node-1 .node-circle::after {
+    opacity: 0.9;
+  }
+  
+  .feature-node-2 .node-circle::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 4px;
+    background: linear-gradient(90deg, #00d4b4, #465e71);
+    top: 50%;
+    left: -300px;
+    transform: translateY(-50%) rotate(-35deg);
+    transform-origin: 100% 50%;
+    transition: opacity 0.3s ease;
+  }
+  
+  .features-container:hover .feature-node-2 .node-circle::before {
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 768px) {
+    .features-section {
+      width: 90vw;
+    }
+  
+    .features-section h2 {
+      font-size: 2.5rem;
+    }
+  
+    .features-container {
+      padding: 5vw;
+    }
+  
+    .features-tree {
+      height: 600px;
+    }
+  
+    .node-circle {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .node-text {
+      max-width: 200px;
+      padding: 8px 12px;
+    }
+  
+    .node-text h3 {
+      font-size: 1rem;
+    }
+  
+    .node-text p {
+      font-size: 0.9rem;
+    }
+  
+    .feature-node-1 {
+      top: 30px;
+    }
+  
+    .feature-node-2 {
+      top: 250px;
+      left: 65%;
+    }
+  
+    .feature-node-3 {
+      top: 250px;
+      left: 35%;
+    }
+  
+    .feature-node-1 .node-circle::after {
+      width: 250px;
+      transform: translateY(-50%) rotate(40deg);
+    }
+  
+    .feature-node-2 .node-circle::before {
+      width: 250px;
+      transform: translateY(-50%) rotate(-40deg);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .features-section h2 {
+      font-size: 2rem;
+    }
+  
+    .features-container {
+      padding: 6vw;
+    }
+  
+    .features-tree {
+      height: 700px;
+    }
+  
+    .node-circle {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .node-text {
+      max-width: 180px;
+      padding: 6px 10px;
+    }
+  
+    .node-text h3 {
+      font-size: 0.9rem;
+    }
+  
+    .node-text p {
+      font-size: 0.8rem;
+    }
+  
+    .feature-node-2 {
+      top: 300px;
+      left: 60%;
+    }
+  
+    .feature-node-3 {
+      top: 300px;
+      left: 40%;
+    }
+  
+    .feature-node-1 .node-circle::after {
+      width: 200px;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  
+    .feature-node-2 .node-circle::before {
+      width: 200px;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
