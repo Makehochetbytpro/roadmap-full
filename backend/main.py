@@ -10,16 +10,16 @@ from typing import List, Optional
 import traceback
 
 #Абсолютные импорты (с префиксом backend)
-from database import SessionLocal
-from models import Topic, Roadmap, User, Step, Comment, CommentLike, TopicLike, StepMaterial, CommunityRoadmap, Vote, Category
-from schemas import (
+from backend.database import SessionLocal
+from backend.models import Topic, Roadmap, User, Step, Comment, CommentLike, TopicLike, StepMaterial, CommunityRoadmap, Vote, Category
+from backend.schemas import (
     RoadmapCreateRequest, StepCreateRequest, StepResponse,
     CommentCreate, CommentResponse, StepMaterialCreate, StepMaterialOut, StepMaterialUpdate,
     CommunityRoadmapCreate, CommunityRoadmapInDB, CommunityRoadmapUpdate,
     VoteCreate, VoteInDB, CategoryOut, TopicRead, CategoryWithTopics
 )
-from auth import router as auth_router
-from auth import get_current_user, get_current_user_optional
+from backend.auth import router as auth_router
+from backend.auth import get_current_user, get_current_user_optional
 
 
 

@@ -2,7 +2,7 @@ from sqlalchemy import Boolean, Column, Integer, String, Text, ForeignKey, TIMES
 from sqlalchemy.dialects.postgresql import BYTEA
 from sqlalchemy.orm import relationship
 from sqlalchemy.schema import UniqueConstraint
-from database import Base
+from backend.database import Base
 from passlib.context import CryptContext  # type: ignore
 import datetime
 
