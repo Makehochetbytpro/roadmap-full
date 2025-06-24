@@ -1,21 +1,26 @@
 import datetime
 import json
 from fastapi import FastAPI, Depends, HTTPException, APIRouter
-from sqlalchemy import select
-from sqlalchemy.orm import Session
-from sqlalchemy.sql import text
-from pydantic import BaseModel
-from typing import List
-from database import SessionLocal #deploy
-from models import Topic, Roadmap, User, Step, Comment, CommentLike, TopicLike,StepMaterial, CommunityRoadmap, Vote, Category
-from schemas import RoadmapCreateRequest, StepCreateRequest, StepResponse, CommentCreate, CommentResponse,StepMaterialCreate,StepMaterialOut,StepMaterialUpdate
-from schemas import CommunityRoadmapCreate, CommunityRoadmapInDB, CommunityRoadmapUpdate, VoteCreate, VoteInDB, CategoryOut, TopicRead, CategoryWithTopics
-from auth import router as auth_router
 from fastapi.middleware.cors import CORSMiddleware
-from auth import get_current_user, get_current_user_optional
-from typing import Optional
+from pydantic import BaseModel
+from sqlalchemy import select
+from sqlalchemy.orm import Session, joinedload
+from sqlalchemy.sql import text
+from typing import List, Optional
 import traceback
-from sqlalchemy.orm import joinedload
+
+#Абсолютные импорты (с префиксом backend)
+from backend.database import SessionLocal
+from backend.models import Topic, Roadmap, User, Step, Comment, CommentLike, TopicLike, StepMaterial, CommunityRoadmap, Vote, Category
+from backend.schemas import (
+    RoadmapCreateRequest, StepCreateRequest, StepResponse,
+    CommentCreate, CommentResponse, StepMaterialCreate, StepMaterialOut, StepMaterialUpdate,
+    CommunityRoadmapCreate, CommunityRoadmapInDB, CommunityRoadmapUpdate,
+    VoteCreate, VoteInDB, CategoryOut, TopicRead, CategoryWithTopics
+)
+from backend.auth import router as auth_router
+from backend.auth import get_current_user, get_current_user_optional
+
 
 
 app = FastAPI()
