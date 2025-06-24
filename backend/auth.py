@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status, FastAPI, Form
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials, OAuth2PasswordBearer
 from sqlalchemy.orm import Session
-from backend.database import SessionLocal  
+from .database import SessionLocal  
 from models import User  
 from schemas import UserCreate, UserLogin  
 from datetime import datetime, timedelta

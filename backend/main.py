@@ -1,27 +1,3 @@
-import os
-import sys
-import traceback
-
-print("\n🔍 DEBUG INFO START")
-print("📁 Current working directory:", os.getcwd())
-print("📚 sys.path:")
-for p in sys.path:
-    print("   ", p)
-print("📂 Files and dirs in cwd:")
-print("   ", os.listdir(os.getcwd()))
-print("🔍 DEBUG INFO END\n")
-
-try:
-    from backend.database import SessionLocal
-except Exception as e:
-    print("\n❌ IMPORT ERROR:")
-    traceback.print_exc()
-    print("❌ IMPORT FAILED\n")
-    raise e  # Повторно пробросить, чтобы Render увидел ошибку
-
-
-
-
 import datetime
 import json
 from fastapi import FastAPI, Depends, HTTPException, APIRouter
@@ -34,16 +10,16 @@ from typing import List, Optional
 import traceback
 
 #Абсолютные импорты (с префиксом backend)
-from backend.database import SessionLocal
-from backend.models import Topic, Roadmap, User, Step, Comment, CommentLike, TopicLike, StepMaterial, CommunityRoadmap, Vote, Category
-from backend.schemas import (
+from .database import SessionLocal
+from .models import Topic, Roadmap, User, Step, Comment, CommentLike, TopicLike, StepMaterial, CommunityRoadmap, Vote, Category
+from .schemas import (
     RoadmapCreateRequest, StepCreateRequest, StepResponse,
     CommentCreate, CommentResponse, StepMaterialCreate, StepMaterialOut, StepMaterialUpdate,
     CommunityRoadmapCreate, CommunityRoadmapInDB, CommunityRoadmapUpdate,
     VoteCreate, VoteInDB, CategoryOut, TopicRead, CategoryWithTopics
 )
-from backend.auth import router as auth_router
-from backend.auth import get_current_user, get_current_user_optional
+from .auth import router as auth_router
+from .auth import get_current_user, get_current_user_optional
 
 
 
