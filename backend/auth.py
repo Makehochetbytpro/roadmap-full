@@ -1,13 +1,13 @@
 from fastapi import APIRouter, Depends, HTTPException, status, FastAPI, Form
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials, OAuth2PasswordBearer
 from sqlalchemy.orm import Session
-from backend.database import SessionLocal  
-from backend.models import User  
-from backend.schemas import UserCreate, UserLogin  
+from database import SessionLocal  
+from models import User  
+from schemas import UserCreate, UserLogin  
 from datetime import datetime, timedelta
 from jose import JWTError, jwt
 from passlib.context import CryptContext
-from backend.config import settings 
+from config import settings 
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional
 
