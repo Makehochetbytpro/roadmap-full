@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.sql import text
 from pydantic import BaseModel
 from typing import List
-from database import SessionLocal
+from database import SessionLocal #deploy
 from models import Topic, Roadmap, User, Step, Comment, CommentLike, TopicLike,StepMaterial, CommunityRoadmap, Vote, Category
 from schemas import RoadmapCreateRequest, StepCreateRequest, StepResponse, CommentCreate, CommentResponse,StepMaterialCreate,StepMaterialOut,StepMaterialUpdate
 from schemas import CommunityRoadmapCreate, CommunityRoadmapInDB, CommunityRoadmapUpdate, VoteCreate, VoteInDB, CategoryOut, TopicRead, CategoryWithTopics
