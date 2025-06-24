@@ -1,3 +1,27 @@
+import os
+import sys
+import traceback
+
+print("\n🔍 DEBUG INFO START")
+print("📁 Current working directory:", os.getcwd())
+print("📚 sys.path:")
+for p in sys.path:
+    print("   ", p)
+print("📂 Files and dirs in cwd:")
+print("   ", os.listdir(os.getcwd()))
+print("🔍 DEBUG INFO END\n")
+
+try:
+    from backend.database import SessionLocal
+except Exception as e:
+    print("\n❌ IMPORT ERROR:")
+    traceback.print_exc()
+    print("❌ IMPORT FAILED\n")
+    raise e  # Повторно пробросить, чтобы Render увидел ошибку
+
+
+
+
 import datetime
 import json
 from fastapi import FastAPI, Depends, HTTPException, APIRouter
